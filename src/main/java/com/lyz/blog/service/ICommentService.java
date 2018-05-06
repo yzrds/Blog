@@ -1,9 +1,10 @@
 package com.lyz.blog.service;
 
+
 import com.github.pagehelper.PageInfo;
-import com.my.blog.website.modal.Bo.CommentBo;
-import com.my.blog.website.modal.Vo.CommentVo;
-import com.my.blog.website.modal.Vo.CommentVoExample;
+import com.lyz.blog.modal.bo.CommentBo;
+import com.lyz.blog.modal.vo.CommentVo;
+import com.lyz.blog.modal.vo.CommentVoExample;
 
 /**
  * Created by llyz.

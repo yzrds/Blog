@@ -9,6 +9,7 @@ import com.lyz.blog.modal.vo.CommentVoExample;
 import com.lyz.blog.modal.vo.UserVo;
 import com.lyz.blog.service.ICommentService;
 import com.lyz.blog.utils.TaleUtils;
+import com.vdurmont.emoji.EmojiParser;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

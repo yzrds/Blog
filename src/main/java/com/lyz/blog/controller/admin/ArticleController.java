@@ -30,7 +30,8 @@ import java.util.List;
  * on 2018/5/6
  */
 @Controller
-@RequestMapping("admin/attach")
+@RequestMapping("/admin/article")
+@Transactional(rollbackFor = TipException.class)
 public class ArticleController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ArticleController.class);
 

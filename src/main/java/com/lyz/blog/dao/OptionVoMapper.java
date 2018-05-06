@@ -3,6 +3,7 @@ package com.lyz.blog.dao;
 import com.lyz.blog.modal.vo.OptionVo;
 import com.lyz.blog.modal.vo.OptionVoExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 

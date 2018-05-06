@@ -4,6 +4,7 @@ import com.lyz.blog.dto.MetaDto;
 import com.lyz.blog.modal.vo.MetaVo;
 import com.lyz.blog.modal.vo.MetaVoExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;

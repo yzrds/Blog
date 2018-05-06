@@ -3,6 +3,7 @@ package com.lyz.blog.dao;
 import com.lyz.blog.modal.vo.CommentVo;
 import com.lyz.blog.modal.vo.CommentVoExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @author youzeliang
  * on 2018/5/6
  */
+@Component
 public interface CommentVoMapper {
     long countByExample(CommentVoExample example);
 

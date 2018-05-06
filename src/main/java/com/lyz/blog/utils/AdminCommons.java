@@ -1,7 +1,7 @@
 package com.lyz.blog.utils;
 
 
-import com.my.blog.website.modal.Vo.MetaVo;
+import com.lyz.blog.modal.vo.MetaVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 

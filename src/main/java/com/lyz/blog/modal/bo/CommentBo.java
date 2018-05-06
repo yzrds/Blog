@@ -1,6 +1,7 @@
 package com.lyz.blog.modal.bo;
 
-import com.my.blog.website.modal.Vo.CommentVo;
+
+import com.lyz.blog.modal.vo.CommentVo;
 
 import java.util.List;
 

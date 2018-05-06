@@ -2,12 +2,12 @@ package com.lyz.blog.utils;
 
 
 import com.github.pagehelper.PageInfo;
-import com.my.blog.website.constant.WebConst;
-import com.my.blog.website.dto.MetaDto;
-import com.my.blog.website.dto.Types;
-import com.my.blog.website.modal.Vo.CommentVo;
-import com.my.blog.website.modal.Vo.ContentVo;
-import com.my.blog.website.service.ISiteService;
+import com.lyz.blog.constant.WebConst;
+import com.lyz.blog.dto.MetaDto;
+import com.lyz.blog.dto.Types;
+import com.lyz.blog.modal.vo.CommentVo;
+import com.lyz.blog.modal.vo.ContentVo;
+import com.lyz.blog.service.ISiteService;
 import com.vdurmont.emoji.EmojiParser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;

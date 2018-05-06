@@ -1,11 +1,12 @@
 package com.lyz.blog.service;
 
-import com.my.blog.website.dto.MetaDto;
-import com.my.blog.website.modal.Bo.ArchiveBo;
-import com.my.blog.website.modal.Bo.BackResponseBo;
-import com.my.blog.website.modal.Bo.StatisticsBo;
-import com.my.blog.website.modal.Vo.CommentVo;
-import com.my.blog.website.modal.Vo.ContentVo;
+
+import com.lyz.blog.dto.MetaDto;
+import com.lyz.blog.modal.bo.ArchiveBo;
+import com.lyz.blog.modal.bo.BackResponseBo;
+import com.lyz.blog.modal.bo.StatisticsBo;
+import com.lyz.blog.modal.vo.CommentVo;
+import com.lyz.blog.modal.vo.ContentVo;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
 package com.lyz.blog.constant;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -9,6 +11,7 @@ import java.util.Set;
  * @author youzeliang
  * on 2018/5/6
  */
+@Component
 public class WebConst {
     /**
      * 存储安装信息的配置文件名称

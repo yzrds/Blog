@@ -1,6 +1,7 @@
 package com.lyz.blog.service;
 
-import com.my.blog.website.modal.Vo.RelationshipVoKey;
+
+import com.lyz.blog.modal.vo.RelationshipVoKey;
 
 import java.util.List;
 

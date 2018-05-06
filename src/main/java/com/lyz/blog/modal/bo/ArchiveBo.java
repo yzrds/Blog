@@ -1,6 +1,7 @@
 package com.lyz.blog.modal.bo;
 
-import com.my.blog.website.modal.Vo.ContentVo;
+
+import com.lyz.blog.modal.vo.ContentVo;
 
 import java.io.Serializable;
 import java.util.List;

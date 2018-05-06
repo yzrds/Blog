@@ -1,6 +1,6 @@
 package com.lyz.blog.service;
 
-import com.my.blog.website.modal.Vo.UserVo;
+import com.lyz.blog.modal.vo.UserVo;
 
 /**
  * Created by llyz.

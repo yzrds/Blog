@@ -3,6 +3,7 @@ package com.lyz.blog.dao;
 import com.lyz.blog.modal.vo.RelationshipVoExample;
 import com.lyz.blog.modal.vo.RelationshipVoKey;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 

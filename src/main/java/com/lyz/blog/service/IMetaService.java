@@ -1,7 +1,8 @@
 package com.lyz.blog.service;
 
-import com.my.blog.website.dto.MetaDto;
-import com.my.blog.website.modal.Vo.MetaVo;
+
+import com.lyz.blog.dto.MetaDto;
+import com.lyz.blog.modal.vo.MetaVo;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.lyz.blog.interceptor;
 
 
-import com.my.blog.website.utils.TaleUtils;
+import com.lyz.blog.utils.TaleUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

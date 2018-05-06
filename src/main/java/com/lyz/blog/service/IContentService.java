@@ -1,8 +1,9 @@
 package com.lyz.blog.service;
 
+
 import com.github.pagehelper.PageInfo;
-import com.my.blog.website.modal.Vo.ContentVo;
-import com.my.blog.website.modal.Vo.ContentVoExample;
+import com.lyz.blog.modal.vo.ContentVo;
+import com.lyz.blog.modal.vo.ContentVoExample;
 
 /**
  * Created by llyz.

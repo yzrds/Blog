@@ -2,6 +2,7 @@ package com.lyz.blog.controller.admin;
 
 import com.github.pagehelper.PageInfo;
 import com.lyz.blog.constant.WebConst;
+import com.lyz.blog.controller.BaseController;
 import com.lyz.blog.dto.LogActions;
 import com.lyz.blog.dto.Types;
 import com.lyz.blog.exception.TipException;
@@ -35,7 +36,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("admin/attach")
-public class AttachController {
+public class AttachController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AttachController.class);
 

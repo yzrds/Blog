@@ -1,9 +1,9 @@
 package com.lyz.blog.service.impl;
 
-import com.my.blog.website.dao.RelationshipVoMapper;
-import com.my.blog.website.modal.Vo.RelationshipVoExample;
-import com.my.blog.website.modal.Vo.RelationshipVoKey;
-import com.my.blog.website.service.IRelationshipService;
+import com.lyz.blog.dao.RelationshipVoMapper;
+import com.lyz.blog.modal.vo.RelationshipVoExample;
+import com.lyz.blog.modal.vo.RelationshipVoKey;
+import com.lyz.blog.service.IRelationshipService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

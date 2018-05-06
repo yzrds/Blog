@@ -1,8 +1,8 @@
 package com.lyz.blog.utils.backup;
 
 
-import com.my.blog.website.utils.backup.db.DataTable;
-import com.my.blog.website.utils.backup.db.Row;
+import com.lyz.blog.utils.backup.db.DataTable;
+import com.lyz.blog.utils.backup.db.Row;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
