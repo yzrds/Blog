@@ -71,9 +71,7 @@ public class SettingController extends BaseController {
             });
 
             optionService.saveOptions(querys);
-
             WebConst.initConfig = querys;
-
             if (StringUtils.isNotBlank(site_theme)) {
                 BaseController.THEME = "themes/" + site_theme;
             }
@@ -128,7 +126,6 @@ public class SettingController extends BaseController {
         StringBuilder ret = new StringBuilder();
         String[] var3 = arr;
         int var4 = arr.length;
-
         for (int var5 = 0; var5 < var4; ++var5) {
             String item = var3[var5];
             ret.append(',').append(item);

@@ -29,6 +29,7 @@ import java.util.List;
 
 /**
  * 后台管理首页
+ *
  * @author youzeliang
  * on 2018/5/6
  */
@@ -49,10 +50,11 @@ public class IndexController extends BaseController {
 
     /**
      * 页面跳转
+     *
      * @return
      */
-    @GetMapping(value = {"","/index"})
-    public String index(HttpServletRequest request){
+    @GetMapping(value = {"", "/index"})
+    public String index(HttpServletRequest request) {
         LOGGER.info("Enter admin index method");
         List<CommentVo> comments = siteService.recentComments(5);
         List<ContentVo> contents = siteService.recentContents(5);
@@ -78,6 +80,7 @@ public class IndexController extends BaseController {
 
     /**
      * admin 退出登录
+     *
      * @return
      */
     @GetMapping(value = "logout")
@@ -140,11 +143,11 @@ public class IndexController extends BaseController {
             logService.insertLog(LogActions.UP_PWD.getAction(), null, request.getRemoteAddr(), this.getUid(request));
 
             //更新session中的数据
-            UserVo original= (UserVo)session.getAttribute(WebConst.LOGIN_SESSION_KEY);
+            UserVo original = (UserVo) session.getAttribute(WebConst.LOGIN_SESSION_KEY);
             original.setPassword(pwd);
-            session.setAttribute(WebConst.LOGIN_SESSION_KEY,original);
+            session.setAttribute(WebConst.LOGIN_SESSION_KEY, original);
             return RestResponseBo.ok();
-        } catch (Exception e){
+        } catch (Exception e) {
             String msg = "密码修改失败";
             if (e instanceof TipException) {
                 msg = e.getMessage();

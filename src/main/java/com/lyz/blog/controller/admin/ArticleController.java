@@ -1,6 +1,5 @@
 package com.lyz.blog.controller.admin;
 
-
 import com.github.pagehelper.PageInfo;
 import com.lyz.blog.controller.BaseController;
 import com.lyz.blog.dto.LogActions;
@@ -46,6 +45,7 @@ public class ArticleController extends BaseController {
 
     /**
      * 文章列表
+     *
      * @param page
      * @param limit
      * @param request
@@ -53,17 +53,18 @@ public class ArticleController extends BaseController {
      */
     @GetMapping(value = "")
     public String index(@RequestParam(value = "page", defaultValue = "1") int page,
-                        @RequestParam(value = "limit", defaultValue = "15") int limit, HttpServletRequest request) {
+                        @RequestParam(value = "limit", defaultValue = "10") int limit, HttpServletRequest request) {
         ContentVoExample contentVoExample = new ContentVoExample();
         contentVoExample.setOrderByClause("created desc");
         contentVoExample.createCriteria().andTypeEqualTo(Types.ARTICLE.getType());
-        PageInfo<ContentVo> contentsPaginator = contentsService.getArticlesWithpage(contentVoExample,page,limit);
+        PageInfo<ContentVo> contentsPaginator = contentsService.getArticlesWithpage(contentVoExample, page, limit);
         request.setAttribute("articles", contentsPaginator);
         return "admin/article_list";
     }
 
     /**
      * 文章发表
+     *
      * @param request
      * @return
      */
@@ -76,6 +77,7 @@ public class ArticleController extends BaseController {
 
     /**
      * 文章编辑
+     *
      * @param cid
      * @param request
      * @return
@@ -92,6 +94,7 @@ public class ArticleController extends BaseController {
 
     /**
      * 文章发表
+     *
      * @param contents
      * @param request
      * @return
@@ -122,6 +125,7 @@ public class ArticleController extends BaseController {
 
     /**
      * 文章更新
+     *
      * @param contents
      * @param request
      * @return
@@ -129,7 +133,7 @@ public class ArticleController extends BaseController {
     @PostMapping(value = "/modify")
     @ResponseBody
     @Transactional(rollbackFor = TipException.class)
-    public RestResponseBo modifyArticle(ContentVo contents,HttpServletRequest request) {
+    public RestResponseBo modifyArticle(ContentVo contents, HttpServletRequest request) {
         UserVo users = this.user(request);
         contents.setAuthorId(users.getUid());
         contents.setType(Types.ARTICLE.getType());
@@ -149,6 +153,7 @@ public class ArticleController extends BaseController {
 
     /**
      * 删除文章
+     *
      * @param cid
      * @param request
      * @return
@@ -159,7 +164,7 @@ public class ArticleController extends BaseController {
     public RestResponseBo delete(@RequestParam int cid, HttpServletRequest request) {
         try {
             contentsService.deleteByCid(cid);
-            logService.insertLog(LogActions.DEL_ARTICLE.getAction(), cid+"", request.getRemoteAddr(), this.getUid(request));
+            logService.insertLog(LogActions.DEL_ARTICLE.getAction(), cid + "", request.getRemoteAddr(), this.getUid(request));
         } catch (Exception e) {
             String msg = "文章删除失败";
             if (e instanceof TipException) {

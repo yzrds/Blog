@@ -48,6 +48,7 @@ public class AuthController extends BaseController {
 
     /**
      * 管理后台登录
+     *
      * @param username
      * @param password
      * @param remeber_me
@@ -65,7 +66,7 @@ public class AuthController extends BaseController {
         Integer error_count = cache.get("login_error_count");
         try {
             byte[] pwd = password.getBytes();
-            String pwdbase64=(new BASE64Encoder()).encodeBuffer(pwd);
+            String pwdbase64 = (new BASE64Encoder()).encodeBuffer(pwd);
             UserVo user = usersService.login(username, pwdbase64);
             request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             if (StringUtils.isNotBlank(remeber_me)) {
@@ -91,10 +92,11 @@ public class AuthController extends BaseController {
 
     /**
      * 注销
+     *
      * @param session
      * @param response
      */
-    @RequestMapping(value = "/logout",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/logout", method = RequestMethod.DELETE)
     public void logout(HttpSession session, HttpServletResponse response, HttpServletRequest request) {
         session.removeAttribute(WebConst.LOGIN_SESSION_KEY);
         Cookie cookie = new Cookie(WebConst.USER_IN_COOKIE, "");

@@ -65,7 +65,6 @@ public class PageController extends BaseController {
     public RestResponseBo publishPage(@RequestParam String title, @RequestParam String content,
                                       @RequestParam String status, @RequestParam String slug,
                                       @RequestParam(required = false) Integer allowComment, @RequestParam(required = false) Integer allowPing, HttpServletRequest request) {
-
         UserVo users = this.user(request);
         ContentVo contents = new ContentVo();
         contents.setTitle(title);
@@ -80,7 +79,6 @@ public class PageController extends BaseController {
             contents.setAllowPing(allowPing == 1);
         }
         contents.setAuthorId(users.getUid());
-
         try {
             contentsService.publish(contents);
         } catch (Exception e) {
@@ -102,7 +100,6 @@ public class PageController extends BaseController {
                                         @RequestParam String content,
                                         @RequestParam String status, @RequestParam String slug,
                                         @RequestParam(required = false) Integer allowComment, @RequestParam(required = false) Integer allowPing, HttpServletRequest request) {
-
         UserVo users = this.user(request);
         ContentVo contents = new ContentVo();
         contents.setCid(cid);

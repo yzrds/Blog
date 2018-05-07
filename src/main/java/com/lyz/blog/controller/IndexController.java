@@ -40,7 +40,7 @@ import java.util.List;
  * on 2018/5/6
  */
 @Controller
-public class IndexController extends BaseController  {
+public class IndexController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
 
     @Resource
